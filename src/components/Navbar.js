@@ -1,20 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-const Navbar = () => {
-    return (
-        <nav className="nav-wrapper">
-            <div className="container">
-                <Link to="/" className="brand-logo">Shopping Cart</Link>
+import React from "react";
+import { NavLink } from "react-router-dom";
+import CartLogo from "../Assets/icons8-shopping-cart-100.png";
 
-                <ul className="right">
-                    <li><Link to="/">Home Page</Link></li>
-                    <li><Link to="/cart">Cart Page</Link></li>
-                </ul>
-            </div>
-        </nav>
+const NavBar = () => {
+  return (
+    <nav>
+      <div>
+        <p>Shopping Cart</p>
+      </div>
 
+      <div>
+        <NavLink to="/">Home Page</NavLink>
+        <NavLink to="/cart">Cart Page</NavLink>
+      </div>
+    </nav>
+  );
+};
 
-    )
-}
-
-export default Navbar;
+export default NavBar;
